@@ -35,15 +35,15 @@
 			<div class="full-price-box">
 				<p class="fieldset">
 					<label name="user-name">Imię: </label>
-					<input class="basket-user-name" name="user-name">
+					<input class="basket-user-name" name="user-name" minlength="3" maxlength="30" required>
 				</p>
 				<p class="fieldset">
 					<label name="user-surname">Nazwisko: </label>
-					<input class="basket-user-surname" name="user-surname">
+					<input class="basket-user-surname" name="user-surname" minlength="3" maxlength="30" required>
 				</p>			
 				<p class="fieldset">
 					<label name="user-mail">Mail: </label>
-					<input class="basket-user-mail" name="user-mail">
+					<input class="basket-user-mail" type="email" name="user-mail" minlength="16" maxlength="60" required>
 				</p>						
 				<p class="fieldset">
 					<input class="full-width" type="submit" value="Zamów">
