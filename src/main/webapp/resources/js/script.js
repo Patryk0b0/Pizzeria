@@ -47,7 +47,7 @@ $(document).ready(function () {
 		
 		
 		var price = main.find(".price");
-		item.append("<label class='basket-item-price-label'>"+ price.text() +"</label><span> zł</span>");
+		item.append("<span> </span><label class='basket-item-price-label'>"+ price.text() +"</label><span> zł</span>");
 		full_price_value = full_price_value + parseInt(price.text());
 		console.log(full_price_value);
 		

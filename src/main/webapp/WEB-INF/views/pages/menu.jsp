@@ -24,7 +24,7 @@
 		<div class="menu-header">
 			<h2>Koszyk</h2>
 		</div>
-		<p class="fieldset">
+		<p class="full-price-box">
 			<span>Do zapłaty łącznie: </span></span><span class="full-price">0.00</span><span> zł</span>
 		</p>
 		<!-- action='<spring:url value="/order"/>' -->
@@ -32,21 +32,23 @@
 			<div class="basket-container">
 
 			</div>
-			<p class="fieldset">
-				<label name="user-name">Imię: </label>
-				<input class="basket-user-name" name="user-name">
-			</p>
-			<p class="fieldset">
-				<label name="user-surname">Nazwisko: </label>
-				<input class="basket-user-surname" name="user-surname">
-			</p>			
-			<p class="fieldset">
-				<label name="user-mail">Mail: </label>
-				<input class="basket-user-mail" name="user-mail">
-			</p>						
-			<p class="fieldset">
-				<input class="full-width" type="submit" value="Zamów">
-			</p>
+			<div class="full-price-box">
+				<p class="fieldset">
+					<label name="user-name">Imię: </label>
+					<input class="basket-user-name" name="user-name">
+				</p>
+				<p class="fieldset">
+					<label name="user-surname">Nazwisko: </label>
+					<input class="basket-user-surname" name="user-surname">
+				</p>			
+				<p class="fieldset">
+					<label name="user-mail">Mail: </label>
+					<input class="basket-user-mail" name="user-mail">
+				</p>						
+				<p class="fieldset">
+					<input class="full-width" type="submit" value="Zamów">
+				</p>
+			</div>
 		</form>
 	</section>
 
@@ -110,7 +112,7 @@
 						<c:forEach items="${dish.getDishAddons()}" var="addon">
 							<div class="menu-list-item-adds-item">
 								<input type="checkbox" id="dish${dish.getId()}-${addon.getAddon().getId()}" name="dish${dish.getId()}-${addon.getAddon().getId()}">
-								<label for="dish${dish.getId()}-${addon.getAddon().getId()}">${addon.getAddon().getName()} (<fmt:formatNumber value="${addon.getAddon().getPrice()}" type="currency" currencySymbol="" /><span>zł</span>)</label>
+								<label for="dish${dish.getId()}-${addon.getAddon().getId()}" class="add-name">${addon.getAddon().getName()} </label><span> (</span><label for="dish${dish.getId()}-${addon.getAddon().getId()}" class="add-price"><fmt:formatNumber value="${addon.getAddon().getPrice()}" type="currency" currencySymbol="" /><span>zł</span>)</label>
 							</div>
 						</c:forEach>
 					</div>
