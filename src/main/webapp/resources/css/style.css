@@ -361,6 +361,18 @@ aside > div > div {
     background-color: burlywood;
 }
 
+.history-item {
+	border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    background-color: cornsilk;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.history-item div {
+	margin-top: 10px;
+}
 
 
 footer {

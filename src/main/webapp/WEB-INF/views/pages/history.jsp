@@ -10,9 +10,11 @@
 	<section class="menu-list">
 		<c:if test="${not empty list}">
 			<c:forEach items="${list}" var="listItem">
-			<div>
-			Kupujący ${listItem.getName()} ${listItem.getSurname()}
-			
+			<div class="history-item">
+				Kupujący ${listItem.getName()} ${listItem.getSurname()}
+				Data ${listItem.getDate().getYear()}.${listItem.getDate().getMonthValue()}.${listItem.getDate().getDayOfMonth()}
+
+
 				<c:forEach items="${listItem.getItems()}" var="menuItem">
 				<div>
 					${menuItem.getItem()}

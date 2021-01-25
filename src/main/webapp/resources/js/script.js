@@ -64,10 +64,10 @@ $(document).ready(function () {
 				
 				full_price_value = full_price_value + parseInt($(this).find(".add-price").text());
 				
-				input_value = input_value.concat($(this).find(".add-name").text() +"|");
+				input_value = input_value.concat($(this).find(".add-name").text()+"|");
 				
-				item.append("<label class='basket-item-addon-name-label'>"+ $(this).find(".add-name").text() +"</label><span> </span>");
-				item.append("<label class='basket-item-addon-price-label'>"+ $(this).find(".add-price").text() +"</label><span> zł</span>");
+				item.append("<label class='basket-item-addon-name-label'>"+$(this).find(".add-name").text()+"</label><span> </span>");
+				item.append("<label class='basket-item-addon-price-label'>"+$(this).find(".add-price").text()+"</label><span> zł</span>");
 			}
 		});
 		
