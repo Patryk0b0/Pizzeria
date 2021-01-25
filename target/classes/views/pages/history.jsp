@@ -10,14 +10,23 @@
 	<section class="menu-list">
 		<c:if test="${not empty list}">
 			<c:forEach items="${list}" var="listItem">
-			<div>
-			Kupujący ${listItem.getName()} ${listItem.getSurname()}
-			
-				<c:forEach items="${listItem.getItems()}" var="menuItem">
-				<div>
-					${menuItem.getItem()}
-					</div>
-				</c:forEach>
+				<div class="history-item">
+					Kupujący ${listItem.getName()} ${listItem.getSurname()}
+					Data ${listItem.getDate().getYear()}.${listItem.getDate().getMonthValue()}.${listItem.getDate().getDayOfMonth()}
+	
+					<c:forEach items="${listItem.getItems()}" var="menuItem">
+						<div>
+							${menuItem.getItem().getName()}, ${menuItem.getItem().getPrice()}
+							
+							<c:if test="${ menuItem.getItem().getItemAddon().size() > 0}">
+								Dodatki:
+								<c:forEach items="${menuItem.getItem().getItemAddon()}" var="addon">
+								
+									${addon.getAddon().getName()} ${addon.getAddon().getPrice()}
+								</c:forEach>
+							</c:if>
+						</div>
+					</c:forEach>
 				</div>
 			</c:forEach>
 		</c:if>

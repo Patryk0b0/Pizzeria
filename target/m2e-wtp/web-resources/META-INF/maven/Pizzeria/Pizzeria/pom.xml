@@ -35,13 +35,22 @@
 			<artifactId>spring-orm</artifactId>
 			<version>5.0.2.RELEASE</version>
 		</dependency>
-		
 		<dependency>
+			    <groupId>javax.mail</groupId>
+		    <artifactId>mail</artifactId>
+		    <version>1.5.0-b01</version>
+		</dependency>	
+  <!-- 	<dependency>
 		    <groupId>javax.mail</groupId>
 		    <artifactId>mail</artifactId>
 		    <version>1.5.0-b01</version>
-		</dependency>
-
+		</dependency> 	
+		  <dependency>
+		    <groupId>com.mailjet</groupId>
+		    <artifactId>mailjet-client</artifactId>
+		    <version>4.2.0</version>
+		  </dependency>
+ -->	
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>

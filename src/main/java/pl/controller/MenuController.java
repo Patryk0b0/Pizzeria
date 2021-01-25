@@ -51,7 +51,10 @@ public class MenuController {
 		model.addAttribute("pizzas", pizzaService.list());
 		model.addAttribute("dishes", dishService.list());
 		model.addAttribute("soups", soupService.list());
-		model.addAttribute("drinks", drinkService.list());	
+		model.addAttribute("drinks", drinkService.list());
+		
+		System.out.println(pizzaService.get("Margheritta"));
+		
 		return "menu";
 	}
 	

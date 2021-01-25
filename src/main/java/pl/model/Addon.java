@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "addons")
-public class Addon {
+public class Addon extends ItemAddon {
 	
 	@Id
 	@Column(name = "id")
@@ -44,6 +44,10 @@ public class Addon {
 
 	public void setPrice(Double price) {
 		this.price = price;
+	}
+
+	public Addon getAddon() {
+		return this;
 	}
 
 }

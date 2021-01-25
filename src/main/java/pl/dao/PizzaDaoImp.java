@@ -32,8 +32,17 @@ public class PizzaDaoImp implements PizzaDao {
 		CriteriaBuilder builder = session.getCriteriaBuilder();
 		CriteriaQuery<Pizza> query = builder.createQuery(Pizza.class);
 		Root<Pizza> root = query.from(Pizza.class);
+		
+		System.out.println(name);
+		
+		
+		
 		query.select(root).where(builder.equal(root.get("name"), name));
 		Query<Pizza> q = session.createQuery(query);
+		
+		
+		
+		
 		return q.getSingleResult();
 	}
 

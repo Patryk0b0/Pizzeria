@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "history_item")
@@ -20,7 +21,10 @@ public class HistoryItem {
 	private Integer history;
 	
 	@Column(name = "item")
-	private String item;
+	private String itemString;
+	
+	@Transient
+	private Item item;
 
 	public Integer getId() {
 		return id;
@@ -30,12 +34,12 @@ public class HistoryItem {
 		this.id = id;
 	}
 
-	public String getItem() {
-		return item;
+	public String getItemString() {
+		return itemString;
 	}
 
-	public void setItem(String item) {
-		this.item = item;
+	public void setItemString(String item) {
+		this.itemString = item;
 	}
 
 	public Integer getHistory() {
@@ -44,5 +48,13 @@ public class HistoryItem {
 
 	public void setHistory(Integer history) {
 		this.history = history;
+	}
+	
+	public Item getItem() {
+		return item;
+	}
+
+	public void setItem(Item item) {
+		this.item = item;
 	}
 }

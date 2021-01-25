@@ -9,6 +9,7 @@ C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\model\Dri
 C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\service\DrinkService.java
 C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\service\SoupService.java
 C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\dao\DishDaoImp.java
+C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\service\AddonService.java
 C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\config\AppConfig.java
 C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\dao\DrinkDaoImp.java
 C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\service\HistoryServiceImp.java
@@ -19,6 +20,7 @@ C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\dao\UserD
 C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\service\DrinkServiceImp.java
 C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\util\Split.java
 C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\model\User.java
+C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\dao\AddonDao.java
 C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\service\UserDetailsServiceImp.java
 C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\dao\SoupDao.java
 C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\dao\DrinkDao.java
@@ -36,8 +38,10 @@ C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\config\Se
 C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\model\Item.java
 C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\model\Pizza.java
 C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\model\DishAddon.java
+C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\model\ItemAddon.java
 C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\model\Authorities.java
 C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\service\PizzaServiceImp.java
+C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\dao\AddonDaoImp.java
 C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\controller\IndexController.java
 C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\service\HistoryItemService.java
 C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\service\PizzaService.java
@@ -49,4 +53,5 @@ C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\controlle
 C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\model\Dish.java
 C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\model\Soup.java
 C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\dao\SoupDaoImp.java
+C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\service\AddonServiceImp.java
 C:\Users\Patryk\Documents\Eclipse\workspace2\Pizzeria\src\main\java\pl\config\WebConfig.java

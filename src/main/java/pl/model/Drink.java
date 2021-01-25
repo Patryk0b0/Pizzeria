@@ -1,5 +1,7 @@
 package pl.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "drinks")
-public class Drink {
+public class Drink extends Item {
 	
 	@Id
 	@Column(name = "id")
@@ -44,6 +46,11 @@ public class Drink {
 
 	public void setPrice(Double price) {
 		this.price = price;
+	}
+
+	@Override
+	public List<ItemAddon> getItemAddon() {
+		return null;
 	}
 
 }

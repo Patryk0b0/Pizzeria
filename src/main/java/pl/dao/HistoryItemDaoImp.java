@@ -15,7 +15,7 @@ public class HistoryItemDaoImp implements HistoryItemDao {
 	@Override
 	public Integer save(Integer history_id, String item) {
 		HistoryItem historyItem = new HistoryItem();
-		historyItem.setItem(item);
+		historyItem.setItemString(item);
 		historyItem.setHistory(history_id);
 		
 		sessionFactory.getCurrentSession().save(historyItem);

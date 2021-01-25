@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "dish_addon")
-public class DishAddon {
+public class DishAddon extends ItemAddon {
 
 	@Id
 	@Column(name = "id")

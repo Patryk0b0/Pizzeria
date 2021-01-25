@@ -15,7 +15,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "dishes")
-public class Dish {
+public class Dish extends Item {
 	
 	@Id
 	@Column(name = "id")
@@ -61,6 +61,12 @@ public class Dish {
 
 	public void setDishAddons(List<DishAddon> dishAddons) {
 		this.dishAddons = dishAddons;
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<ItemAddon> getItemAddon() {
+		return (List<ItemAddon>)(List<?>)getDishAddons();
 	}
 
 }
