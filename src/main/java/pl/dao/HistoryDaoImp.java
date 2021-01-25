@@ -47,4 +47,15 @@ public class HistoryDaoImp implements HistoryDao {
 		return q.getResultList();
 	}
 
+	@Override
+	public History get(Integer id) {
+		Session session = sessionFactory.getCurrentSession();
+		CriteriaBuilder builder = session.getCriteriaBuilder();
+		CriteriaQuery<History> query = builder.createQuery(History.class);
+		Root<History> root = query.from(History.class);
+		query.select(root).where(builder.equal(root.get("id"), id));
+		Query<History> q = session.createQuery(query);
+		return q.getSingleResult();
+	}
+
 }

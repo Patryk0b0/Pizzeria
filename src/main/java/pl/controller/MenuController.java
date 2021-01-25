@@ -2,9 +2,6 @@ package pl.controller;
 
 import java.util.List;
 
-import javax.mail.MessagingException;
-import javax.mail.internet.AddressException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import pl.model.History;
 import pl.model.HistoryItem;
 import pl.model.ItemList;
 import pl.service.DishService;
@@ -60,21 +58,12 @@ public class MenuController {
 	@PostMapping("/menu")
 	public String index(@RequestParam("item") String[] list, @RequestParam("user-name") String name, @RequestParam("user-surname") String surname, @RequestParam("user-mail") String mail) {
 		Integer id = historyService.save(list, name, surname, mail);
-		
+
 		for (String itemString : list) {
 			historyItemService.save(id, itemString);
 		}
-		
-		Mail email = new Mail();
-		try {
-			email.send("test", mail);
-		} catch (AddressException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (MessagingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+
+		Mail.send(Mail.mailFormat(historyService.get(id)), mail);
 		
 		return "redirect:/history";
 	}

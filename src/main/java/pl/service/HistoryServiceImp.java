@@ -27,4 +27,10 @@ public class HistoryServiceImp implements HistoryService {
 		return historyDao.list();
 	}
 
+	@Transactional(readOnly = true)
+	@Override
+	public History get(Integer id) {
+		return historyDao.get(id);
+	}
+
 }

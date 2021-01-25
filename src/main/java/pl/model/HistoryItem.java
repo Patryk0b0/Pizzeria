@@ -45,7 +45,4 @@ public class HistoryItem {
 	public void setHistory(Integer history) {
 		this.history = history;
 	}
-	
-	
-	
 }
