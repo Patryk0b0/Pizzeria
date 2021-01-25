@@ -24,6 +24,9 @@
 		<div class="menu-header">
 			<h2>Koszyk</h2>
 		</div>
+		<p class="fieldset">
+			<span>Do zapłaty łącznie: </span></span><span class="full-price">0.00</span><span> zł</span>
+		</p>
 		<!-- action='<spring:url value="/order"/>' -->
 		<form class="basket-form" method="post" accept-charset="UTF-8">
 			<div class="basket-container">

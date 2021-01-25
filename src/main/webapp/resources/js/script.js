@@ -27,6 +27,13 @@ $(document).ready(function () {
 	$('.menu-list-order-label').click(function () {
 		var tag = $(this).closest(".menu-list").attr('class').split(' ')[1];
 		var main = $(this).closest(".menu-list-item");
+		
+		var full_price = $('main').find(".full-price");
+		var full_price_value = parseInt(full_price.text());
+		
+
+		
+		console.log(full_price.text());
 		console.log(tag);
 		var input_value = tag + "|";
 		
@@ -38,8 +45,11 @@ $(document).ready(function () {
 		item.append("<label class='basket-item-name-label'>"+ name.text() +"</label>");
 		input_value = input_value.concat(name.text() +"|");
 		
+		
 		var price = main.find(".price");
 		item.append("<label class='basket-item-price-label'>"+ price.text() +"</label><span> zł</span>");
+		full_price_value = full_price_value + parseInt(price.text());
+		console.log(full_price_value);
 		
 		var amount = main.find(".menu-list-item-quantity-label");
 		input_value = input_value.concat(amount.text() +"|");
@@ -52,20 +62,25 @@ $(document).ready(function () {
 				console.log($(this).find(".add-name").text());
 				console.log($(this).find(".add-price").text());
 				
+				full_price_value = full_price_value + parseInt($(this).find(".add-price").text());
+				
 				input_value = input_value.concat($(this).find(".add-name").text() +"|");
 				
 				item.append("<label class='basket-item-addon-name-label'>"+ $(this).find(".add-name").text() +"</label><span> </span>");
 				item.append("<label class='basket-item-addon-price-label'>"+ $(this).find(".add-price").text() +"</label><span> zł</span>");
 			}
 		});
-
+		
+		console.log(full_price_value);
+		
+		full_price.text(full_price_value.toFixed(2));
 		
 		
 		console.log(name.text());
 		console.log(price.text());
 		console.log(amount.text());
 		
-		item.append("<input name='item' class='basket-item-name-label' value='"+input_value+"' readonly>");
+		item.append("<input name='item' class='basket-item-name-label' value='"+input_value+"' readonly readonly style='display: none;'>");
 		
 //<input class="basket-item-price" value="20,00" readonly style="display: none;">
 //<input class="basket-item-addon-name" value="Podwójny ser" readonly style="display: none;"><input class="basket-item-addon-price" value="2,00" readonly style="display: none;">
