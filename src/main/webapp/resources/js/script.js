@@ -47,7 +47,7 @@ $(document).ready(function () {
 		
 		
 		var price = main.find(".price");
-		item.append("<span> </span><label class='basket-item-price-label'>"+ price.text() +"</label><span> zł</span>");
+		item.append("<span> </span><label class='basket-item-price-label'>"+ price.text() +"</label><span> zł</span><br>");
 		full_price_value = full_price_value + parseInt(price.text());
 		console.log(full_price_value);
 		
@@ -67,7 +67,7 @@ $(document).ready(function () {
 				input_value = input_value.concat($(this).find(".add-name").text()+"|");
 				
 				item.append("<label class='basket-item-addon-name-label'>"+$(this).find(".add-name").text()+"</label><span> </span>");
-				item.append("<label class='basket-item-addon-price-label'>"+$(this).find(".add-price").text()+"</label><span> zł</span>");
+				item.append("<label class='basket-item-addon-price-label'>"+$(this).find(".add-price").text()+"</label><span> zł</span><br>");
 			}
 		});
 		
